@@ -1,0 +1,6 @@
+@MindmapMathAPI_HostAddress = http://localhost:5228
+
+GET {{MindmapMathAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

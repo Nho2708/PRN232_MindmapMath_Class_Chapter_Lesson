@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindmapMathAPI", "MindmapMathAPI\MindmapMathAPI.csproj", "{7E4B87FF-6FD4-4542-AEEB-1EE9E3E89B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindmapBO", "MindmapBO\MindmapBO.csproj", "{DDA0816B-9541-4566-B032-C57A73C74C9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindmapDAO", "MindmapDAO\MindmapDAO.csproj", "{CFF9FEE2-4674-4CEE-9CEF-499F4729BB24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindmapRepository", "MindmapRepository\MindmapRepository.csproj", "{3AD099E9-AE64-4207-BA6C-07F07B2D2D8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindmapService", "MindmapService\MindmapService.csproj", "{53012D33-E58F-4443-A5A2-EC1D6681CEE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E4B87FF-6FD4-4542-AEEB-1EE9E3E89B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E4B87FF-6FD4-4542-AEEB-1EE9E3E89B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E4B87FF-6FD4-4542-AEEB-1EE9E3E89B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E4B87FF-6FD4-4542-AEEB-1EE9E3E89B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA0816B-9541-4566-B032-C57A73C74C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA0816B-9541-4566-B032-C57A73C74C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA0816B-9541-4566-B032-C57A73C74C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA0816B-9541-4566-B032-C57A73C74C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF9FEE2-4674-4CEE-9CEF-499F4729BB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF9FEE2-4674-4CEE-9CEF-499F4729BB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF9FEE2-4674-4CEE-9CEF-499F4729BB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF9FEE2-4674-4CEE-9CEF-499F4729BB24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AD099E9-AE64-4207-BA6C-07F07B2D2D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AD099E9-AE64-4207-BA6C-07F07B2D2D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AD099E9-AE64-4207-BA6C-07F07B2D2D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AD099E9-AE64-4207-BA6C-07F07B2D2D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53012D33-E58F-4443-A5A2-EC1D6681CEE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53012D33-E58F-4443-A5A2-EC1D6681CEE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53012D33-E58F-4443-A5A2-EC1D6681CEE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53012D33-E58F-4443-A5A2-EC1D6681CEE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDB85FFC-1A0A-412B-B7F3-72F1D4E43942}
+	EndGlobalSection
+EndGlobal
