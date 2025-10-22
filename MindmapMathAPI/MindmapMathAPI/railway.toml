@@ -1,1 +1,7 @@
-﻿
+﻿# railway.toml – định nghĩa cách Railway build và chạy app
+[build]
+builder = "dockerfile"
+dockerfilePath = "./Dockerfile"
+
+[deploy]
+startCommand = "dotnet MindmapMathAPI.dll"
