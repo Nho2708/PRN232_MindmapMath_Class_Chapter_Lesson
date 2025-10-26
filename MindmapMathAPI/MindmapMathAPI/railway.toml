@@ -1,6 +1,0 @@
-﻿[build]
-builder = "dockerfile"
-dockerfilePath = "./MindmapMathAPI/Dockerfile"
-
-[deploy]
-startCommand = "dotnet MindmapMathAPI.dll"
