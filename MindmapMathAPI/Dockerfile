@@ -4,13 +4,15 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy csproj và restore dependencies
+# Copy solution and project file
 COPY *.sln ./
-COPY MindmapMathAPI/*.csproj ./MindmapMathAPI/
+COPY MindmapMathAPI/MindmapMathAPI.csproj ./MindmapMathAPI/
 RUN dotnet restore MindmapMathAPI/MindmapMathAPI.csproj
 
-# Copy toàn b? source và publish
+# Copy all source
 COPY . .
+
+# Build & publish
 RUN dotnet publish MindmapMathAPI/MindmapMathAPI.csproj -c Release -o /app/publish /p:UseAppHost=false
 
 # =============================
@@ -18,10 +20,8 @@ RUN dotnet publish MindmapMathAPI/MindmapMathAPI.csproj -c Release -o /app/publi
 # =============================
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
-
 COPY --from=build /app/publish .
 
-# Render m?c ??nh expose port 10000 ? ta dùng 8080 cho th?ng nh?t
 ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
