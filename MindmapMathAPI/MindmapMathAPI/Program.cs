@@ -64,7 +64,7 @@ namespace MindmapMathAPI
 
             app.MapControllers();
 
-            app.Run("http://localhost:5228");
+            app.Run();
 
         }
     }
