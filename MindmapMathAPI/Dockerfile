@@ -4,21 +4,21 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy solution file
-COPY MindmapMathAPI/MindmapMathAPI.sln
 
-# Copy từng project con
-COPY MindmapBO/*.csproj MindmapBO/
-COPY MindmapDAO/*.csproj MindmapDAO/
-COPY MindmapRepository/*.csproj MindmapRepository/
-COPY MindmapService/*.csproj MindmapService/
-COPY MindmapMathAPI/*.csproj MindmapMathAPI/
+COPY MindmapMathAPI/MindmapMathAPI.sln ./MindmapMathAPI.sln
+
+
+COPY MindmapMathAPI/MindmapBO/*.csproj MindmapBO/
+COPY MindmapMathAPI/MindmapDAO/*.csproj MindmapDAO/
+COPY MindmapMathAPI/MindmapRepository/*.csproj MindmapRepository/
+COPY MindmapMathAPI/MindmapService/*.csproj MindmapService/
+COPY MindmapMathAPI/MindmapMathAPI/*.csproj MindmapMathAPI/
 
 # Restore dependencies
-RUN dotnet restore
+RUN dotnet restore ./MindmapMathAPI.sln
 
-# Copy toàn bộ source code
-COPY . .
+
+COPY MindmapMathAPI/ .
 
 # Publish Web API
 RUN dotnet publish MindmapMathAPI/MindmapMathAPI.csproj -c Release -o /app/publish /p:UseAppHost=false
