@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy solution file
-COPY MindmapMathAPI.sln ./
+COPY MindmapMathAPI/MindmapMathAPI.sln
 
 # Copy từng project con
 COPY MindmapBO/*.csproj MindmapBO/
