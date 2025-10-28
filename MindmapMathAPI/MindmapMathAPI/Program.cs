@@ -48,11 +48,16 @@ namespace MindmapMathAPI
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+            //if (app.Environment.IsDevelopment())
+            //{
+            //    app.UseSwagger();
+            //    app.UseSwaggerUI();
+            //}
+
+            // Always enable Swagger (useful for Docker / Render)
+            app.UseSwagger();
+            app.UseSwaggerUI();
+
 
             // Auto-migrate
             using (var scope = app.Services.CreateScope())
