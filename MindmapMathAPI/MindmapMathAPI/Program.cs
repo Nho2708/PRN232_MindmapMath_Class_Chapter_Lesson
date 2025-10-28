@@ -1,4 +1,4 @@
-
+﻿
 using Microsoft.EntityFrameworkCore;
 using MindmapBO.Data;
 using MindmapRepository;
@@ -56,6 +56,7 @@ namespace MindmapMathAPI
                 db.Database.Migrate();
             }
 
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
@@ -63,7 +64,8 @@ namespace MindmapMathAPI
 
             app.MapControllers();
 
-            app.Run();
+            app.Run("http://localhost:5228");
+
         }
     }
 }
