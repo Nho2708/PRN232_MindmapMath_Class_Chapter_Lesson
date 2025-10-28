@@ -25,8 +25,19 @@ public partial class MindmapMathDbContext : DbContext
     public virtual DbSet<Models.Math> Maths { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=QUANG-NHO\\PRN222;Database=MindmapMathDB;User Id=sa;Password=12345;TrustServerCertificate=True;");
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            var connectionString =
+                "Server=switchback.proxy.rlwy.net;Port=35539;Database=railway;" +
+                "User Id=root;Password=wkzEOkNgSkVYSEuvAgCqqqqeqhdkvNcB;" +
+                "SslMode=Required;AllowPublicKeyRetrieval=True;";
+
+            optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+        }
+    }
+
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

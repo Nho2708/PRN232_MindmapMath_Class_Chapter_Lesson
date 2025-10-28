@@ -15,23 +15,22 @@ namespace MindmapMathAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-        
+
             // 2 dòng này để Render đọc đúng PORT
-            var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-            builder.WebHost.UseUrls($"http://+:{port}");
+            //var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+            //builder.WebHost.UseUrls($"http://+:{port}");
 
-
-            // Add services to the container.
+            builder.Services.AddDbContext<MindmapMathDbContext>(options =>
+            {
+                var conn = builder.Configuration.GetConnectionString("Default");
+                options.UseMySql(conn, ServerVersion.AutoDetect(conn));
+            });
 
             builder.Services.AddControllers();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
-            // EF Core
-            builder.Services.AddDbContext<MindmapMathDbContext>(opt =>
-                opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // DI repositories
             builder.Services.AddScoped<IMathRepository, MathRepository>();
