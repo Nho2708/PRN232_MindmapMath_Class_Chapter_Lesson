@@ -15,6 +15,12 @@ namespace MindmapMathAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
+        
+            // 2 dòng này để Render đọc đúng PORT
+            var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+            builder.WebHost.UseUrls($"http://+:{port}");
+
+
             // Add services to the container.
 
             builder.Services.AddControllers();
